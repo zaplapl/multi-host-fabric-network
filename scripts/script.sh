@@ -31,7 +31,7 @@ fi
 echo "Channel name : "$CHANNEL_NAME
 
 # import utils
-. scripts/utils.sh
+. ./utils.sh
 
 createChannel() {
 	setGlobals 0 1
