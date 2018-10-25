@@ -79,12 +79,8 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer0.org1.example.com:/var/hyperledger/production
-        - ./chaincode/:/opt/gopath/src/github.com/chaincode
-        - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
-        - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
-        - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
     
     deploy:
             mode: replicated
@@ -140,12 +136,8 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer1.org1.example.com:/var/hyperledger/production
-        - ./chaincode/:/opt/gopath/src/github.com/chaincode
-        - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
-        - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
-        - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer/channel-artifacts
     
     deploy:
             mode: replicated
