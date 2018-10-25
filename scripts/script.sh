@@ -7,7 +7,7 @@ echo "\___ \    | |     / _ \   | |_) |   | |  "
 echo " ___) |   | |    / ___ \  |  _ <    | |  "
 echo "|____/    |_|   /_/   \_\ |_| \_\   |_|  "
 echo
-echo "Welcome to the Multi-Host Fabric Network (MHFN) end-to-end test"
+echo "Build your Multi network (BYMN) end-to-end test"
 echo
 CHANNEL_NAME="$1"
 DELAY="$2"
@@ -31,7 +31,7 @@ fi
 echo "Channel name : "$CHANNEL_NAME
 
 # import utils
-. ./utils.sh
+. scripts/utils.sh
 
 createChannel() {
 	setGlobals 0 1
@@ -105,7 +105,7 @@ echo "Querying chaincode on peer1.org2..."
 chaincodeQuery 1 2 90
 
 echo
-echo "========= All GOOD, MHFN execution completed =========== "
+echo "========= All GOOD, BYMN execution completed =========== "
 echo
 
 echo
