@@ -34,8 +34,8 @@ export VERBOSE=false
 export ORDERER_HOSTNAME="orderer-node"
 export ORG1_HOSTNAME="org1"
 export ORG2_HOSTNAME="org2"
-export SWARM_NETWORK="fabric"
-export DOCKER_STACK="fabric"
+export SWARM_NETWORK="mhn"
+export DOCKER_STACK="mhn"
 
 # Print the usage message
 function printHelp() {
@@ -329,7 +329,7 @@ function generateChannelArtifacts() {
   # Note: For some unknown reason (at least for now) the block file can't be
   # named orderer.genesis.block or the orderer will fail to launch!
   set -x
-  configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
+  mkdir ./channel-artifacts && configtxgen -profile TwoOrgsOrdererGenesis -outputBlock ./channel-artifacts/genesis.block
   res=$?
   set +x
   if [ $res -ne 0 ]; then
@@ -398,7 +398,7 @@ COMPOSE_FILE_ORG3=docker-compose-org3.yaml
 # use golang as the default language for chaincode
 LANGUAGE=golang
 # default image tag
-IMAGETAG="1.1.0"
+IMAGETAG="1.3.0"
 # Parse commandline args
 if [ "$1" = "-m" ]; then # supports old usage, muscle memory is powerful!
   shift
