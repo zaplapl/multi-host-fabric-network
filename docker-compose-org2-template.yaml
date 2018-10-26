@@ -57,7 +57,7 @@ services:
       # the following setting starts chaincode containers on the same
       # bridge network as the peers
       # https://docs.docker.com/compose/networking/
-      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhfn
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhds
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
       #- CORE_LOGGING_LEVEL=INFO
       - CORE_LOGGING_LEVEL=DEBUG
@@ -113,7 +113,7 @@ services:
       # the following setting starts chaincode containers on the same
       # bridge network as the peers
       # https://docs.docker.com/compose/networking/
-      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhfn
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhds
       #- CORE_LOGGING_LEVEL=INFO
       - CORE_LOGGING_LEVEL=DEBUG
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
