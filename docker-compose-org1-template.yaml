@@ -55,7 +55,7 @@ services:
       # the following setting starts chaincode containers on the same
       # bridge network as the peers
       # https://docs.docker.com/compose/networking/
-      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhfn
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
       #- CORE_LOGGING_LEVEL=INFO
       - CORE_LOGGING_LEVEL=DEBUG
@@ -79,7 +79,7 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer0.org1.example.com:/var/hyperledger/production
     
     deploy:
@@ -112,7 +112,7 @@ services:
       # the following setting starts chaincode containers on the same
       # bridge network as the peers
       # https://docs.docker.com/compose/networking/
-      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=fabric
+      - CORE_VM_DOCKER_HOSTCONFIG_NETWORKMODE=mhfn
       #- CORE_LOGGING_LEVEL=INFO
       - CORE_LOGGING_LEVEL=DEBUG
       - CORE_PEER_CHAINCODELISTENADDRESS=0.0.0.0:7052
@@ -136,7 +136,7 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer1.org1.example.com:/var/hyperledger/production
     
     deploy:
