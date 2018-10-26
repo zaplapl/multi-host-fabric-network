@@ -79,7 +79,7 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer0.org1.example.com:/var/hyperledger/production
     
     deploy:
@@ -136,7 +136,7 @@ services:
         - /var/run/:/host/var/run/
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/msp:/etc/hyperledger/fabric/msp
         - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/tls:/etc/hyperledger/fabric/tls
-        #- ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
+        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer1.org1.example.com/ca:/etc/hyperledger/fabric/ca
         - peer1.org1.example.com:/var/hyperledger/production
     
     deploy:
